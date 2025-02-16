@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
   host: 'mysql-achked.alwaysdata.net',       // adjust if necessary
   user: 'achked',            // your MySQL username
-  password: 'kedata2003', // your MySQL password
+  password: 'kedata2003@@@', // your MySQL password
   database: 'achked_db',
   waitForConnections: true,
   connectionLimit: 10,

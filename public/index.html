@@ -3,18 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login - Chat App</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Arab Chat - Connect with the world</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #a47dff, #5c5ee2, #039faa);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1000px;
+      flex-wrap: wrap;
+    }
+
+    .info-section {
+      color: white;
+      max-width: 50%;
+      text-align: center;
+    }
+
+    .info-section h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+
+    .info-section p {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      width: 100%;
+      max-width: 350px;
+      margin-top: 20px;
+    }
+
+    .login-container h2 {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.2rem;
+      padding: 0.75rem 1rem;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem;
+      font-weight: 600;
+      width: 100%;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #5a67d8, #6b46c1);
+      transform: translateY(-2px);
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .register-link a {
+      text-decoration: none;
+      color: #667eea;
+      font-weight: 600;
+    }
+
+    .register-link a:hover {
+      color: #5a67d8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-section {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .login-container {
+        max-width: 100%;
+      }
+      .info-section h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    }
+  </style>
 </head>
 <body>
-  <div class="login-container">
-    <h1>Login</h1>
-    <form action="/login" method="POST">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="/register.html">Register here</a></p>
+  <div class="container">
+    <div class="info-section">
+      <h1>Arab Chat</h1>
+      <p>Connect with friends and the world around you on Arab Chat.</p>
+    </div>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        <input type="text" name="username" class="form-control" placeholder="Username" required>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <p class="register-link">Don't have an account? <a href="/register.html">Register here</a></p>
+    </div>
   </div>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
